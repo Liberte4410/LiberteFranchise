@@ -1,10 +1,10 @@
 ﻿/* ==========================================================================
-   Liberté（リベルテ）FC募集LP - カスタムスタイルシート
+   Liberté（リベルテ）FC募集LP - カスタムスタイルシート (集客インパクト強化版)
    ========================================================================== */
 
 @charset "UTF-8";
 
-/* --- 基本フォント＆サイズ拡大（読みやすさ重視） --- */
+/* --- フォント設定 --- */
 html {
   font-size: 16px;
 }
@@ -16,113 +16,141 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #1e293b;
+  font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  color: #0f172a;
   background-color: #ffffff;
   overflow-x: hidden;
-  word-break: break-word;
-  line-break: strict;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.7;
+}
+
+/* インパクト数字・見出し用フォント */
+.font-impact {
+  font-family: 'Dela Gothic One', 'Zen Kaku Gothic New', sans-serif;
 }
 
 /* --- カラー変数 --- */
 :root {
-  --color-white: #ffffff;
-  --color-sky-blue: #0284c7;
-  --color-sky-blue-light: #0ea5e9;
-  --color-ice-blue: #f0f9ff;
-  --color-ice-blue-border: #bae6fd;
-  --color-sakura-pink: #fdf2f8;
-  --color-sakura-pink-border: #fce7f3;
-  --color-sakura-accent: #f43f5e;
-  --color-pale-mint: #f0fdf4;
-  --color-pale-mint-border: #dcfce7;
-  --color-mint-accent: #10b981;
+  --color-sky: #0284c7;
+  --color-sky-dark: #0369a1;
+  --color-line-green: #06c755;
+  --color-accent-amber: #f59e0b;
 }
 
 /* --- すりガラス効果（Glassmorphism） --- */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(224, 242, 254, 0.85);
+  border-bottom: 2px solid rgba(2, 132, 199, 0.12);
 }
 
 .glass-footer {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(224, 242, 254, 0.9);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 10px 30px -5px rgba(2, 132, 199, 0.08);
-}
-
-.glass-floating {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(2, 132, 199, 0.18);
-  box-shadow: 0 -8px 25px rgba(2, 132, 199, 0.12);
+  border-top: 2px solid rgba(2, 132, 199, 0.15);
 }
 
-/* --- ファーストビュー：女性背景と文字の重なり防止 --- */
-.hero-wrapper {
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(224, 242, 254, 0.9);
+  box-shadow: 0 12px 32px -4px rgba(2, 132, 199, 0.12);
+}
+
+/* --- 超目立つ立体CTAボタン（成約率特化） --- */
+.btn-cta-primary {
   position: relative;
-  background-color: #f8fafc;
-}
-
-/* PC：右側に女性が大きく見える背景設定 */
-@media (min-width: 1024px) {
-  .hero-pc-bg {
-    background-image: url('images/fv-bg.jpg');
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .hero-gradient-overlay {
-    background: linear-gradient(to right, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.88) 55%, rgba(255, 255, 255, 0.1) 75%, transparent 100%);
-  }
-}
-
-/* キラリと光るボタンアニメーション */
-.shimmer-btn {
-  position: relative;
+  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff !important;
+  box-shadow: 0 6px 0 #075985, 0 12px 24px rgba(2, 132, 199, 0.35);
+  transition: all 0.15s ease-in-out;
+  border: 2px solid #38bdf8;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.shimmer-btn::after {
+.btn-cta-primary:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #075985, 0 8px 16px rgba(2, 132, 199, 0.4);
+  background: linear-gradient(180deg, #0369a1 0%, #075985 100%);
+}
+
+.btn-cta-primary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #075985, 0 4px 8px rgba(2, 132, 199, 0.3);
+}
+
+/* LINE専用立体ボタン */
+.btn-cta-line {
+  position: relative;
+  background: linear-gradient(180deg, #06c755 0%, #05a847 100%);
+  color: #ffffff !important;
+  box-shadow: 0 6px 0 #047a33, 0 12px 24px rgba(6, 199, 85, 0.3);
+  transition: all 0.15s ease-in-out;
+  border: 2px solid #86efac;
+  overflow: hidden;
+}
+
+.btn-cta-line:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #047a33, 0 8px 16px rgba(6, 199, 85, 0.4);
+}
+
+.btn-cta-line:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #047a33, 0 4px 8px rgba(6, 199, 85, 0.3);
+}
+
+/* キラッと走る光のアニメーション */
+.shimmer-glow::after {
   content: '';
   position: absolute;
   top: -50%;
-  left: -50%;
-  width: 200%;
+  left: -60%;
+  width: 220%;
   height: 200%;
   background: linear-gradient(
     60deg,
-    transparent,
-    rgba(255, 255, 255, 0.35),
-    transparent
+    transparent 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 70%
   );
-  transform: rotate(25deg) translate(-100%, -100%);
-  transition: transform 0.8s ease;
+  transform: rotate(25deg);
+  animation: shine-sweep 3.5s infinite ease-in-out;
 }
 
-.shimmer-btn:hover::after {
-  transform: rotate(25deg) translate(100%, 100%);
+@keyframes shine-sweep {
+  0% {
+    transform: rotate(25deg) translate(-100%, -100%);
+  }
+  20%, 100% {
+    transform: rotate(25deg) translate(100%, 100%);
+  }
 }
 
-.shimmer-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px -4px rgba(2, 132, 199, 0.4);
+/* --- 強調マーカーライン --- */
+.marker-yellow {
+  background: linear-gradient(transparent 60%, #fef08a 60%);
+}
+
+.marker-cyan {
+  background: linear-gradient(transparent 60%, #bae6fd 60%);
+}
+
+.marker-pink {
+  background: linear-gradient(transparent 60%, #fbcfe8 60%);
+}
+
+/* --- スマホで変な改行を防ぐ設定 --- */
+.word-keep {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.balanced-text {
+  text-wrap: balance;
 }
 
 /* --- アコーディオンの開閉トランジション --- */
@@ -148,7 +176,7 @@ body {
 
 /* --- 埋め込みフォーム調整 --- */
 #xhm-form {
-  min-height: 400px;
+  min-height: 420px;
   width: 100%;
 }
 
