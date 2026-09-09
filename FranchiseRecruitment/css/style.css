@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* ===================================================
+   Liberté (リベルテ) LP Fresh & Clean Palette
+   白 × ブルー・水色・薄ピンク・薄緑のさわやかなデザイン
+   =================================================== */
+
+:root {
+  --color-bg-base: #ffffff;
+  --color-bg-subtle: #f8fafc;
+  --color-sky-light: #f0f9ff;
+  --color-sky-soft: #e0f2fe;
+  --color-sky-primary: #0284c7;
+  --color-pink-soft: #fdf2f8;
+  --color-pink-border: #fbcfe8;
+  --color-pink-accent: #ec4899;
+  --color-green-soft: #f0fdf4;
+  --color-green-border: #bbf7d0;
+  --color-green-accent: #10b981;
+  --color-text-main: #0f172a;
+  --color-text-muted: #475569;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+/* Glassmorphism Light Navbar */
+.glass-nav-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Pastel Gradients */
+.bg-fresh-gradient {
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #fdf2f8 100%);
+}
+
+.bg-sky-gradient {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #38bdf8 100%);
+}
+
+.bg-mint-gradient {
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+}
+
+.bg-pink-gradient {
+  background: linear-gradient(135deg, #db2777 0%, #ec4899 50%, #f472b6 100%);
+}
+
+/* Text Gradients */
+.text-sky-gradient {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-pink-gradient {
+  background: linear-gradient(135deg, #db2777 0%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fresh Pastel Badges */
+.badge-sky {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  color: #0369a1;
+}
+
+.badge-pink {
+  background-color: #fdf2f8;
+  border: 1px solid #fbcfe8;
+  color: #be185d;
+}
+
+.badge-green {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+/* Card Hover Effects */
+.card-hover-fresh {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-fresh:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px -8px rgba(14, 165, 233, 0.12), 0 6px 12px -4px rgba(0, 0, 0, 0.04);
+}
+
+/* Pulse Glow for Fresh CTA */
+@keyframes pulse-fresh {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(2, 132, 199, 0);
+  }
+}
+
+.pulse-button-fresh {
+  animation: pulse-fresh 2.5s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
