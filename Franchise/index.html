@@ -115,14 +115,13 @@
     <!-- ==================== 2. ファーストビュー (Hero) ==================== -->
     <section class="relative overflow-hidden bg-white border-b-2 border-sky-100">
       
-      <!-- PC用レイアウト（セルフ脱毛・ホワイトニングサロンの清潔な空間が背景、文字が100%主役） -->
-      <div class="hidden lg:block relative min-h-[520px] xl:min-h-[580px] bg-gradient-to-r from-sky-50 via-white to-transparent">
+      <!-- PC用レイアウト（女性が右側に大きく表示され、左側に力強い大文字コピー） -->
+      <div class="hidden lg:block relative min-h-[500px] xl:min-h-[560px] bg-gradient-to-r from-sky-50 via-white to-transparent">
         
-        <!-- 右側のセルフサロン個室・照射器ブース画像 -->
-        <div class="absolute top-0 right-0 w-7/12 h-full pointer-events-none overflow-hidden">
-          <img src="images/salon-fv.jpg" alt="セルフ脱毛・ホワイトニングサロン空間" class="w-full h-full object-cover object-center" onerror="this.src='images/reason-1.jpg'">
-          <!-- 左側への自然なフェードアウト（文字の可読性を100%確保） -->
-          <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+        <!-- 右側の女性大画像 -->
+        <div class="absolute top-0 right-0 w-3/5 h-full pointer-events-none">
+          <img src="images/fv-bg.jpg" alt="リベルテ セルフケア" class="w-full h-full object-cover object-center" onerror="this.src='https://images.hirameki7.io/web-assets/143596/9e504be6-5a7c-4389-bd89-032dedf45ac8.jpg?1764654048201'">
+          <div class="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 h-full relative z-10 py-12 xl:py-16">
@@ -177,39 +176,37 @@
         </div>
       </div>
 
-      <!-- スマホ用レイアウト（真っ先に文字が主役！画像は背景に優しく馴染ませ、文字がパッと飛び込む構成） -->
-      <div class="block lg:hidden relative bg-gradient-to-b from-sky-50/60 via-white to-sky-50/30 overflow-hidden">
+      <!-- スマホ用レイアウト（女性画像を大きく見せつつ、文字と顔が重ならず、改行も自然） -->
+      <div class="block lg:hidden">
         
-        <!-- 背景に薄く馴染ませたセルフサロンブース（文字の邪魔を一切しない） -->
-        <div class="absolute right-0 top-0 w-full h-80 opacity-25 pointer-events-none">
-          <img src="images/salon-fv.jpg" alt="セルフサロンブース" class="w-full h-full object-cover object-center" onerror="this.src='images/reason-1.jpg'">
-          <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/90 to-white"></div>
-        </div>
-
-        <!-- スマホの文字エリア（画面最上部からドカンと文字が目立つ！） -->
-        <div class="relative z-10 px-4 pt-6 pb-6 space-y-4 text-center">
-
-          <!-- 上部バッジ -->
-          <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-sky-600 text-white text-xs font-black shadow-sm">
-            <i class="fa-solid fa-sparkles text-amber-300"></i>
-            <span>年中無休・24H無人セルフサロン</span>
+        <!-- 上部：女性の大画像 -->
+        <div class="relative w-full h-72 sm:h-84 overflow-hidden bg-slate-100">
+          <img src="images/fv-bg.jpg" alt="リベルテ 女性" class="w-full h-full object-cover object-right-top" onerror="this.src='https://images.hirameki7.io/web-assets/143596/9e504be6-5a7c-4389-bd89-032dedf45ac8.jpg?1764654048201'">
+          
+          <div class="absolute top-3 left-3 bg-sky-600 text-white px-3.5 py-1 rounded-full text-xs font-black shadow-md">
+            ✨ 年中無休・24H無人セルフ
           </div>
 
-          <!-- メインコピー（スマホ画面の主役！） -->
-          <h1 class="text-3xl font-black text-slate-900 leading-tight">
+          <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+        </div>
+
+        <!-- 下部：文字エリア（単語単位で折り返し、変な改行を防止） -->
+        <div class="px-4 pt-2 pb-6 space-y-4 bg-white text-center">
+
+          <!-- メインコピー（スマホ用インパクト大文字） -->
+          <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
             <span class="inline-block">人を雇わず、</span><br>
-            <span class="inline-block text-sky-700 underline decoration-sky-300 decoration-8 underline-offset-2">利益を育てる新しい店舗経営</span>
+            <span class="inline-block text-sky-700 underline decoration-sky-300 decoration-4">利益を育てる新しい店舗経営</span>
           </h1>
 
-          <!-- サブコピー（イエローゴールド帯で強烈アピール） -->
+          <!-- サブコピー -->
           <div>
-            <div class="inline-block bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-lg px-4 py-1.5 rounded-xl shadow-md border border-amber-300">
+            <div class="inline-block bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-base sm:text-lg px-4 py-1.5 rounded-xl shadow-md border border-amber-300">
               空きスペースを活用した運営モデル
             </div>
           </div>
 
-          <!-- リード文 -->
-          <p class="text-sm text-slate-800 font-bold leading-relaxed px-1">
+          <p class="text-sm sm:text-base text-slate-700 font-bold leading-relaxed px-2">
             本部だけが儲かる常識を変えたい！<br>
             オーナー様の実働は<strong class="text-sky-700 font-black bg-sky-100 px-1 rounded">週わずか1時間（月4時間）</strong>の清掃と補充のみ。<br>
             集客・決済・顧客対応はすべて本部が完全代行！
@@ -217,27 +214,17 @@
 
           <!-- 3大バッジ（スマホ用） -->
           <div class="grid grid-cols-3 gap-2 pt-1">
-            <div class="bg-white p-2.5 rounded-xl border-2 border-emerald-300 shadow-sm">
+            <div class="bg-emerald-50 p-2.5 rounded-xl border-2 border-emerald-300 shadow-sm">
               <span class="text-[10px] font-black text-emerald-800 block">実働時間</span>
               <p class="text-base font-black text-emerald-600">月4時間〜</p>
             </div>
-            <div class="bg-white p-2.5 rounded-xl border-2 border-sky-300 shadow-sm">
+            <div class="bg-sky-50 p-2.5 rounded-xl border-2 border-sky-300 shadow-sm">
               <span class="text-[10px] font-black text-sky-800 block">初期費用</span>
               <p class="text-base font-black text-sky-600">180万円〜</p>
             </div>
-            <div class="bg-white p-2.5 rounded-xl border-2 border-rose-300 shadow-sm">
+            <div class="bg-rose-50 p-2.5 rounded-xl border-2 border-rose-300 shadow-sm">
               <span class="text-[10px] font-black text-rose-800 block">雇用コスト</span>
               <p class="text-base font-black text-rose-600">0円・無人</p>
-            </div>
-          </div>
-
-          <!-- セルフサロン導入ブースの写真を文字の下に品よく添える（文字を読んだ直後にイメージが湧く） -->
-          <div class="pt-2">
-            <div class="rounded-2xl overflow-hidden border-2 border-sky-200 shadow-md bg-white">
-              <img src="images/salon-fv.jpg" alt="セルフ脱毛・セルフホワイトニングサロン個室ブース" class="w-full h-44 object-cover" onerror="this.src='images/reason-1.jpg'">
-              <div class="py-1.5 px-3 bg-sky-50 text-[11px] font-bold text-sky-800 text-center">
-                ▲ 省スペース（2坪〜）で導入可能なセルフ施術ブース
-              </div>
             </div>
           </div>
 
