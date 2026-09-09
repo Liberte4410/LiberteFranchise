@@ -1,5 +1,5 @@
 ﻿/* ==========================================================================
-   Liberté（リベルテ）FC募集LP - カンプ完全準拠スタイルシート
+   Liberté（リベルテ）FC募集LP - カスタムスタイルシート (集客インパクト強化版)
    ========================================================================== */
 
 @charset "UTF-8";
@@ -11,101 +11,170 @@ html {
 
 @media (min-width: 640px) {
   html {
-    font-size: 16.5px;
+    font-size: 17px;
   }
 }
 
 body {
   font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
-  color: #1e293b;
+  color: #0f172a;
   background-color: #ffffff;
   overflow-x: hidden;
-  line-height: 1.7;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
-/* 手書き風フォント（アクセント用） */
-@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Zen+Maru+Gothic:wght@700;900&display=swap');
-
-.font-script {
-  font-family: 'Yuji Boku', 'Zen Maru Gothic', cursive, sans-serif;
+/* インパクト数字・見出し用フォント */
+.font-impact {
+  font-family: 'Dela Gothic One', 'Zen Kaku Gothic New', sans-serif;
 }
 
-/* --- すりガラス効果 --- */
+/* --- カラー変数 --- */
+:root {
+  --color-sky: #0284c7;
+  --color-sky-dark: #0369a1;
+  --color-line-green: #06c755;
+  --color-accent-amber: #f59e0b;
+}
+
+/* --- すりガラス効果（Glassmorphism） --- */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(224, 242, 254, 0.8);
+  border-bottom: 2px solid rgba(2, 132, 199, 0.12);
+}
+
+.glass-footer {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 2px solid rgba(2, 132, 199, 0.15);
 }
 
 .glass-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 20px -2px rgba(2, 132, 199, 0.06);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(224, 242, 254, 0.9);
+  box-shadow: 0 12px 32px -4px rgba(2, 132, 199, 0.12);
 }
 
-/* --- ファーストビュー背景 --- */
-.hero-bg {
-  background-image: url('images/hero-room.jpg');
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: contain;
+/* --- 超目立つ立体CTAボタン（成約率特化） --- */
+.btn-cta-primary {
+  position: relative;
+  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff !important;
+  box-shadow: 0 6px 0 #075985, 0 12px 24px rgba(2, 132, 199, 0.35);
+  transition: all 0.15s ease-in-out;
+  border: 2px solid #38bdf8;
+  overflow: hidden;
 }
 
-@media (max-width: 1023px) {
-  .hero-bg {
-    background-image: url('images/hero-room.jpg');
-    background-position: top center;
-    background-size: cover;
+.btn-cta-primary:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #075985, 0 8px 16px rgba(2, 132, 199, 0.4);
+  background: linear-gradient(180deg, #0369a1 0%, #075985 100%);
+}
+
+.btn-cta-primary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #075985, 0 4px 8px rgba(2, 132, 199, 0.3);
+}
+
+/* LINE専用立体ボタン */
+.btn-cta-line {
+  position: relative;
+  background: linear-gradient(180deg, #06c755 0%, #05a847 100%);
+  color: #ffffff !important;
+  box-shadow: 0 6px 0 #047a33, 0 12px 24px rgba(6, 199, 85, 0.3);
+  transition: all 0.15s ease-in-out;
+  border: 2px solid #86efac;
+  overflow: hidden;
+}
+
+.btn-cta-line:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #047a33, 0 8px 16px rgba(6, 199, 85, 0.4);
+}
+
+.btn-cta-line:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #047a33, 0 4px 8px rgba(6, 199, 85, 0.3);
+}
+
+/* キラッと走る光のアニメーション */
+.shimmer-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 220%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 70%
+  );
+  transform: rotate(25deg);
+  animation: shine-sweep 3.5s infinite ease-in-out;
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: rotate(25deg) translate(-100%, -100%);
+  }
+  20%, 100% {
+    transform: rotate(25deg) translate(100%, 100%);
   }
 }
 
-/* --- カンプ完全準拠ボタン --- */
-.btn-blue {
-  background: #0ea5e9;
-  color: #ffffff;
-  transition: all 0.2s ease;
+/* --- 強調マーカーライン --- */
+.marker-yellow {
+  background: linear-gradient(transparent 60%, #fef08a 60%);
 }
 
-.btn-blue:hover {
-  background: #0284c7;
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+.marker-cyan {
+  background: linear-gradient(transparent 60%, #bae6fd 60%);
 }
 
-.btn-green {
-  background: #06c755;
-  color: #ffffff;
-  transition: all 0.2s ease;
+.marker-pink {
+  background: linear-gradient(transparent 60%, #fbcfe8 60%);
 }
 
-.btn-green:hover {
-  background: #05a847;
-  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+/* --- スマホで変な改行を防ぐ設定 --- */
+.word-keep {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
-/* --- アコーディオンの開閉 --- */
-.faq-content {
+.balanced-text {
+  text-wrap: balance;
+}
+
+/* --- アコーディオンの開閉トランジション --- */
+.accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease-out, opacity 0.3s ease-out;
   opacity: 0;
 }
 
-.faq-content.active {
-  max-height: 600px;
+.accordion-content.active {
+  max-height: 800px;
   opacity: 1;
 }
 
-.faq-icon {
+.accordion-icon {
   transition: transform 0.3s ease;
 }
 
-.faq-icon.rotated {
-  transform: rotate(45deg);
+.accordion-icon.rotated {
+  transform: rotate(180deg);
 }
 
-/* --- 埋め込みフォーム --- */
+/* --- 埋め込みフォーム調整 --- */
 #xhm-form {
   min-height: 420px;
   width: 100%;
@@ -114,4 +183,5 @@ body {
 #xhm-form iframe {
   width: 100% !important;
   border: none !important;
+  border-radius: 12px;
 }

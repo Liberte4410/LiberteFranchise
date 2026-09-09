@@ -3,7 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. スムーススクロール
+  // --- 1. スムーススクロール（ヘッダーの高さを考慮） ---
   const headerOffset = 76;
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
 
-        // モバイルメニューを閉じる
+        // モバイルメニューが開いていたら閉じる
         const spMenuDrawer = document.getElementById('sp-menu-drawer');
         if (spMenuDrawer && !spMenuDrawer.classList.contains('hidden')) {
           spMenuDrawer.classList.add('hidden');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. モバイルハンバーガーメニュー
+  // --- 2. モバイル用ハンバーガーメニュー開閉 ---
   const spMenuBtn = document.getElementById('sp-menu-btn');
   const spMenuClose = document.getElementById('sp-menu-close');
   const spMenuDrawer = document.getElementById('sp-menu-drawer');
@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. FAQアコーディオン開閉
-  const faqButtons = document.querySelectorAll('.faq-btn');
-  faqButtons.forEach(btn => {
+  // --- 3. アコーディオン開閉（FAQ・詳細情報） ---
+  const accordionButtons = document.querySelectorAll('.accordion-btn');
+  accordionButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const content = btn.nextElementSibling;
-      const icon = btn.querySelector('.faq-icon');
+      const icon = btn.querySelector('.accordion-icon');
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
       btn.setAttribute('aria-expanded', !isExpanded);
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. スマホ固定フッターCTAの表示制御
+  // --- 4. モバイル固定フッターCTAの表示制御 ---
   const floatingCta = document.getElementById('floating-cta');
   const contactSection = document.getElementById('contact-form-section');
 
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      if (scrollY > 240) {
+      if (scrollY > 220) {
         if (contactSection) {
           const contactRect = contactSection.getBoundingClientRect();
           if (contactRect.top < windowHeight && contactRect.bottom > 0) {
@@ -94,4 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   }
+
+  // --- 5. フォーム読み込みのステータス監視＆フォールバック ---
+  setTimeout(() => {
+    const xhmForm = document.getElementById('xhm-form');
+    const formFallback = document.getElementById('form-fallback-msg');
+    if (xhmForm && formFallback) {
+      if (xhmForm.children.length === 0) {
+        formFallback.classList.remove('hidden');
+      }
+    }
+  }, 4000);
 });
