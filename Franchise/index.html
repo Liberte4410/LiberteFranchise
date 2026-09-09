@@ -1,0 +1,845 @@
+﻿<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年中無休・24H営業の無人セルフ脱毛＆セルフホワイトニング Liberté（リベルテ） FC加盟募集</title>
+  <meta name="description" content="人を雇わず、利益を育てる新しい店舗経営。空きスペースを活用した無人セルフ脱毛＆セルフホワイトニングLiberté（リベルテ）のフランチャイズ加盟店募集。実働月4時間、初期費用180万円〜。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              sky: '#0284c7',
+              skyLight: '#0ea5e9',
+              ice: '#f0f9ff',
+              iceBorder: '#bae6fd',
+              sakura: '#fdf2f8',
+              sakuraBorder: '#fce7f3',
+              sakuraText: '#e11d48',
+              mint: '#f0fdf4',
+              mintBorder: '#dcfce7',
+              mintDark: '#059669',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-sky-100 selection:text-sky-800">
+
+  <!-- ==================== 1. すりガラス追従ヘッダー ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <img src="images/logo.svg" alt="Liberté（リベルテ）" class="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.src='https://liberte.hirameki7.site/images/logo.svg'">
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+        <a href="#reasons" class="hover:text-brand-sky transition-colors">選ばれる理由</a>
+        <a href="#comparison" class="hover:text-brand-sky transition-colors">収益モデル</a>
+        <a href="#voices" class="hover:text-brand-sky transition-colors">加盟店の声</a>
+        <a href="#profile" class="hover:text-brand-sky transition-colors">本部代表</a>
+        <a href="#faq" class="hover:text-brand-sky transition-colors">よくある質問</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://line.me/ti/p/~sln_lbrt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-full transition-all">
+          <i class="fa-brands fa-line text-emerald-500 text-base"></i> LINE相談
+        </a>
+        <a href="#contact-form-section" class="shimmer-btn inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 rounded-full shadow-md shadow-sky-500/20 transition-all">
+          <span>無料相談・資料請求</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <button id="sp-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-brand-sky focus:outline-none" aria-label="メニューを開く">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルメニュー ドロワー -->
+  <div id="sp-menu-drawer" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden md:hidden">
+    <div class="absolute right-0 top-0 bottom-0 w-4/5 max-w-sm bg-white p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+          <img src="images/logo.svg" alt="Liberté" class="h-8 w-auto">
+          <button id="sp-menu-close" class="p-2 text-slate-500 hover:text-slate-800" aria-label="閉じる">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+          </button>
+        </div>
+        <nav class="mt-6 flex flex-col space-y-4 text-base font-semibold text-slate-700">
+          <a href="#reasons" class="py-2 border-b border-slate-50 hover:text-brand-sky">選ばれる3つの理由</a>
+          <a href="#comparison" class="py-2 border-b border-slate-50 hover:text-brand-sky">従来モデルとの比較</a>
+          <a href="#plan" class="py-2 border-b border-slate-50 hover:text-brand-sky">初期費用・収支</a>
+          <a href="#voices" class="py-2 border-b border-slate-50 hover:text-brand-sky">加盟店様の声</a>
+          <a href="#profile" class="py-2 border-b border-slate-50 hover:text-brand-sky">本部代表プロフィール</a>
+          <a href="#steps" class="py-2 border-b border-slate-50 hover:text-brand-sky">開業までの流れ</a>
+          <a href="#faq" class="py-2 border-b border-slate-50 hover:text-brand-sky">よくある質問</a>
+        </nav>
+      </div>
+      <div class="mt-8 space-y-3 pt-4 border-t border-slate-100">
+        <a href="#contact-form-section" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-white bg-sky-600 shadow-md">
+          <i class="fa-regular fa-envelope"></i> 無料相談・資料請求
+        </a>
+        <a href="https://line.me/ti/p/~sln_lbrt" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-emerald-700 bg-emerald-50 border border-emerald-200">
+          <i class="fa-brands fa-line text-lg text-emerald-500"></i> 公式LINEで相談
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="pt-20 sm:pt-24">
+
+    <!-- ==================== 2. ファーストビュー (Hero) ==================== -->
+    <section class="relative overflow-hidden bg-gradient-soft py-10 sm:py-16 lg:py-20 border-b border-sky-100/60">
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-24 w-96 h-96 bg-pink-200/30 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 left-1/3 w-80 h-80 bg-emerald-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <div class="lg:col-span-7 text-center lg:text-left space-y-5">
+            <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold tracking-wide text-sky-800 bg-sky-100/80 rounded-full border border-sky-200">
+                <i class="fa-solid fa-sparkles text-sky-500"></i> 年中無休・24時間営業 無人セルフサロン
+              </span>
+              <span class="inline-flex items-center gap-1 px-3 py-1 text-xs font-bold tracking-wide text-rose-700 bg-rose-50 rounded-full border border-rose-200">
+                <i class="fa-solid fa-location-dot text-rose-500"></i> 全国展開中
+              </span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.25] sm:leading-[1.2]">
+              人を雇わず、利益を育てる<br>
+              <span class="text-gradient-sky">新しい店舗経営</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl font-bold text-slate-700">
+              <span class="bg-amber-100/70 text-amber-900 px-2 py-0.5 rounded">空きスペースを活用した運営モデル</span>
+            </p>
+
+            <p class="text-sm sm:text-base text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              本部だけが儲かる時代は終わり。オーナー様の実働は<strong class="text-sky-700 font-semibold underline decoration-sky-300 decoration-2">週わずか1時間（月4時間）</strong>の清掃・補充のみ。集客・決済・顧客対応はすべて本部が完全バックアップする「共存型ビジネス」です。
+            </p>
+
+            <!-- 3大訴求バッジ -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 py-2 max-w-lg mx-auto lg:mx-0">
+              <div class="glass-card rounded-xl p-2.5 sm:p-3 text-center border-emerald-200/60 bg-emerald-50/40">
+                <span class="block text-[11px] font-bold text-emerald-800">実働時間</span>
+                <div class="text-sm sm:text-base font-extrabold text-emerald-600 mt-0.5">月4時間<span class="text-xs font-normal">〜</span></div>
+                <span class="block text-[10px] text-slate-500 mt-0.5">現場は清掃のみ</span>
+              </div>
+              <div class="glass-card rounded-xl p-2.5 sm:p-3 text-center border-sky-200/60 bg-sky-50/40">
+                <span class="block text-[11px] font-bold text-sky-800">初期費用</span>
+                <div class="text-sm sm:text-base font-extrabold text-sky-600 mt-0.5">180万円<span class="text-xs font-normal">〜</span></div>
+                <span class="block text-[10px] text-slate-500 mt-0.5">空きスペース活用</span>
+              </div>
+              <div class="glass-card rounded-xl p-2.5 sm:p-3 text-center border-rose-200/60 bg-rose-50/40">
+                <span class="block text-[11px] font-bold text-rose-800">採用コスト</span>
+                <div class="text-sm sm:text-base font-extrabold text-rose-500 mt-0.5">0円・無人</div>
+                <span class="block text-[10px] text-slate-500 mt-0.5">雇用リスクなし</span>
+              </div>
+            </div>
+
+            <!-- CTAボタンエリア -->
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+              <a href="#contact-form-section" class="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-extrabold text-white bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 hover:from-sky-600 hover:to-sky-800 rounded-xl shadow-lg shadow-sky-500/25">
+                <i class="fa-regular fa-file-lines text-lg"></i>
+                <span>無料相談・資料請求はこちら</span>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </a>
+              <a href="https://line.me/ti/p/~sln_lbrt" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 text-sm font-bold text-emerald-700 bg-white hover:bg-emerald-50 border-2 border-emerald-300 rounded-xl shadow-sm transition-all">
+                <i class="fa-brands fa-line text-emerald-500 text-xl"></i>
+                <span>LINEで手軽に相談</span>
+              </a>
+            </div>
+            <p class="text-[11px] text-slate-400 text-center lg:text-left">※しつこい営業電話は一切いたしません。オンライン面談も随時受付中。</p>
+          </div>
+
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                <img src="images/fv-bg.jpg" alt="リベルテサロン店内" class="w-full h-72 sm:h-96 object-cover object-center" onerror="this.src='https://images.hirameki7.io/web-assets/143596/9e504be6-5a7c-4389-bd89-032dedf45ac8.jpg?1764654048201'">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <span class="inline-block px-2.5 py-1 bg-sky-500/90 backdrop-blur-sm text-xs font-semibold rounded-md mb-1">直営・FC店舗展開</span>
+                  <p class="text-sm font-bold leading-tight">セルフ脱毛 ＆ セルフホワイトニング<br>清潔感あふれる完全個室空間</p>
+                </div>
+              </div>
+
+              <div class="absolute -bottom-5 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-3.5 rounded-xl shadow-xl border border-sky-100 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center font-bold text-lg">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold text-slate-500">2026年3月までに</p>
+                  <p class="text-sm font-extrabold text-slate-800">全国<span class="text-brand-sky text-lg">14店舗</span>出店決定！</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. 経営課題・共感セクション ==================== -->
+    <section class="py-12 sm:py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-100">店舗オーナー・経営者のリアルな悩み</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">こんな課題を抱えていませんか？</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg mb-3">
+              <i class="fa-solid fa-users-slash"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1.5">人材採用と離職の不安</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">採用費をかけてもすぐ辞めてしまう。スタッフのシフト管理や人間関係に疲弊している。</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg mb-3">
+              <i class="fa-solid fa-door-open"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1.5">空きスペースの収益化</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">自社ビルや既存サロンの一角、空室スペースを持て余しており、家賃だけが垂れ流しになっている。</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg mb-3">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1.5">本業が忙しく時間がない</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">新規事業を始めたいが、拘束時間が長いモデルは不可能。手間なく回る事業を探している。</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg mb-3">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-1.5">本部だけが儲かるFCの不信</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">高額な加盟金やロイヤリティを徴収され、現場のオーナーが赤字になるFCモデルにはうんざり。</p>
+          </div>
+        </div>
+
+        <div class="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-sky-50 via-white to-emerald-50 border border-sky-200 text-center">
+          <p class="text-sm font-bold text-sky-800">💡 Liberté（リベルテ）は、これらすべての悩みを解決するために生まれた</p>
+          <p class="text-lg sm:text-xl font-extrabold text-slate-900 mt-1">「人を雇わない」「実働月4時間」「空きスペース活用」の新しいFCモデルです。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. リベルテが選ばれる3つの理由 ==================== -->
+    <section id="reasons" class="py-12 sm:py-20 bg-gradient-to-b from-sky-50/50 via-white to-sky-50/30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-sky bg-sky-100 px-3 py-1 rounded-full">Reason for Selection</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3">リベルテが選ばれる<span class="text-gradient-sky">3つの理由</span></h2>
+          <p class="text-sm text-slate-600 mt-2">時代が求める無人セルフケア市場と、本部徹底サポートの仕組み</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- 理由 1: お客様が選ぶ -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-sky-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+            <div>
+              <div class="relative h-48 overflow-hidden">
+                <img src="images/reason-1.jpg" alt="お客様が選ぶセルフケア" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://images.hirameki7.io/web-assets/143596/4b6daa03-dcf8-426c-8eaa-5889d25d9f1a.jpg?1764654821683'">
+                <div class="absolute top-3 left-3 bg-brand-sky text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">
+                  理由 01
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-2">1. お客様が選ぶ</h3>
+                <p class="text-xs font-semibold text-brand-sky mb-3">高額ローン不要！低単価・都度払いの安心感</p>
+                <ul class="text-xs sm:text-sm text-slate-600 space-y-2 leading-relaxed">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-sky-500 mt-0.5"></i>
+                    <span>大手サロン相次ぐ倒産で、都度払い・サブスク需要が急伸</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-sky-500 mt-0.5"></i>
+                    <span>男性脱毛・介護脱毛・口元ケアの市場拡大</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-sky-500 mt-0.5"></i>
+                    <span>24時間365日営業で、誰にも会わず好きな時に利用可能</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-0">
+              <div class="bg-sky-50 rounded-xl p-3 text-center text-xs font-bold text-sky-900">
+                続けやすいからリピート率が高い！
+              </div>
+            </div>
+          </div>
+
+          <!-- 理由 2: 加盟店様が楽チン -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-emerald-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+            <div>
+              <div class="relative h-48 overflow-hidden">
+                <img src="images/reason-2.jpg" alt="現場作業は清掃と補充のみ" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://images.hirameki7.io/web-assets/143596/93426c8e-fde0-4978-8fbb-2693ccd67595.jpg?1764806029247'">
+                <div class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">
+                  理由 02
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-2">2. 加盟店様が楽チン</h3>
+                <p class="text-xs font-semibold text-emerald-700 mb-3">週1時間（月4時間）の作業で運営可能</p>
+                <ul class="text-xs sm:text-sm text-slate-600 space-y-2 leading-relaxed">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
+                    <span><strong>オーナー業務は現場清掃と消耗品補充のみ</strong></span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
+                    <span>集客・広告運用・顧客管理・決済はすべて本部が代行</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
+                    <span>補助金申請のお手伝いもあり、初期負担を大幅軽減</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-0">
+              <div class="bg-emerald-50 rounded-xl p-3 text-center text-xs font-bold text-emerald-900">
+                未経験でも本業の片手間でしっかり運営！
+              </div>
+            </div>
+          </div>
+
+          <!-- 理由 3: 時代にマッチする -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-rose-100 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+            <div>
+              <div class="relative h-48 overflow-hidden">
+                <img src="images/reason-3.jpg" alt="時代にマッチする無人モデル" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://images.hirameki7.io/web-assets/143596/9060a112-2d9d-4ac2-a04d-ad2d7bc9d832.jpg?1764914167481'">
+                <div class="absolute top-3 left-3 bg-rose-500 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">
+                  理由 03
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-2">3. 時代にマッチする</h3>
+                <p class="text-xs font-semibold text-rose-600 mb-3">少子高齢化・人手不足の時代に最適な無人モデル</p>
+                <ul class="text-xs sm:text-sm text-slate-600 space-y-2 leading-relaxed">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-rose-500 mt-0.5"></i>
+                    <span>経営最大の悩み「採用・雇用トラブル」から完全解放</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-rose-500 mt-0.5"></i>
+                    <span>「接客されたくない」「マイペースがいい」若者需要と一致</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-circle-check text-rose-500 mt-0.5"></i>
+                    <span>人件費ゼロだから損益分岐点が圧倒的に低い</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-0">
+              <div class="bg-rose-50 rounded-xl p-3 text-center text-xs font-bold text-rose-900">
+                人口減少社会でも持続可能な店舗ビジネス！
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-10 p-6 sm:p-8 rounded-3xl bg-white border border-sky-100 shadow-sm text-center max-w-3xl mx-auto">
+          <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">「本部が儲かりすぎる常識を変えたい！」</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
+            本部だけが利益を吸い上げるビジネスモデルでは、長く続く仕組みは作れません。<br>
+            リベルテは<strong>“加盟店様がしっかり儲かること”</strong>を最優先し、加盟店様の負担を極限まで減らした共存型ビジネスを追求しています。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. 従来サロン vs リベルテ 比較表 ==================== -->
+    <section id="comparison" class="py-12 sm:py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-sky bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Comparison</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">従来のサロン経営 vs Liberté（リベルテ）</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">一目でわかる、リスクの低さと高効率な収益性</p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-sky-100 shadow-sm">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-slate-100/80 text-slate-700">
+                <th class="p-3 sm:p-4 font-bold w-1/3">比較項目</th>
+                <th class="p-3 sm:p-4 font-bold text-slate-500 w-1/3">従来の有人サロン</th>
+                <th class="p-3 sm:p-4 font-extrabold text-sky-800 bg-sky-100/80 w-1/3 text-center">
+                  <span class="inline-block px-2 py-0.5 bg-sky-600 text-white text-[11px] rounded-full mr-1">注目</span> Liberté
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr>
+                <td class="p-3 sm:p-4 font-bold text-slate-800">スタッフ雇用</td>
+                <td class="p-3 sm:p-4 text-slate-600">必要（採用費・給与・教育）</td>
+                <td class="p-3 sm:p-4 font-bold text-sky-700 bg-sky-50/40 text-center">不要（無人運営・人件費0円）</td>
+              </tr>
+              <tr>
+                <td class="p-3 sm:p-4 font-bold text-slate-800">オーナー実働時間</td>
+                <td class="p-3 sm:p-4 text-slate-600">週40時間以上（フルタイム常駐）</td>
+                <td class="p-3 sm:p-4 font-bold text-sky-700 bg-sky-50/40 text-center">週1時間（月4時間程度）</td>
+              </tr>
+              <tr>
+                <td class="p-3 sm:p-4 font-bold text-slate-800">初期投資額</td>
+                <td class="p-3 sm:p-4 text-slate-600">800万〜1,500万円前後</td>
+                <td class="p-3 sm:p-4 font-bold text-sky-700 bg-sky-50/40 text-center">180万円〜（空きスペース活用）</td>
+              </tr>
+              <tr>
+                <td class="p-3 sm:p-4 font-bold text-slate-800">集客・決済業務</td>
+                <td class="p-3 sm:p-4 text-slate-600">自店舗で個別対応</td>
+                <td class="p-3 sm:p-4 font-bold text-sky-700 bg-sky-50/40 text-center">本部が一括フルサポート</td>
+              </tr>
+              <tr>
+                <td class="p-3 sm:p-4 font-bold text-slate-800">営業時間</td>
+                <td class="p-3 sm:p-4 text-slate-600">10:00〜20:00（スタッフ依存）</td>
+                <td class="p-3 sm:p-4 font-bold text-sky-700 bg-sky-50/40 text-center">24時間 365日フル稼働</td>
+              </tr>
+              <tr>
+                <td class="p-3 sm:p-4 font-bold text-slate-800">損益分岐点</td>
+                <td class="p-3 sm:p-4 text-slate-600">固定費が高く回収が長期化</td>
+                <td class="p-3 sm:p-4 font-bold text-emerald-600 bg-sky-50/40 text-center font-extrabold">低固定費で早期回収が可能</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. 料金・初期費用 ==================== -->
+    <section id="plan" class="py-12 sm:py-16 bg-gradient-to-b from-sky-50/30 to-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-sky bg-sky-100 px-3 py-1 rounded-full">Cost & Investment</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">開業に必要な初期費用</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">既存スペースの活用や補助金利用で、さらに低コストで開業可能</p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 sm:p-10 border border-sky-100 shadow-lg text-center max-w-2xl mx-auto">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold text-sky-800 bg-sky-100 mb-2">初期費用</span>
+          <div class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+            180<span class="text-2xl sm:text-3xl font-bold">万円〜</span>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-slate-100 text-left text-xs sm:text-sm text-slate-600 space-y-3 bg-sky-50/50 p-4 rounded-2xl">
+            <p class="font-bold text-slate-800 flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info text-sky-600"></i> 開業費用について
+            </p>
+            <p class="leading-relaxed">
+              既存店舗の加盟金を含めた開業費用の平均は約400万円です。<br>
+              <strong>既存事業の空きスペースを活用</strong>したり、<strong>補助金などを利用</strong>することで、<strong>200万円以内での開業</strong>も十分に可能です。
+            </p>
+          </div>
+
+          <div class="mt-6">
+            <a href="#contact-form-section" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white bg-sky-600 hover:bg-sky-700 rounded-xl shadow-md transition-all">
+              <span>詳しい収支シミュレーション資料を請求する</span>
+              <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. 加盟店様の声 ==================== -->
+    <section id="voices" class="py-12 sm:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-sky bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Voice of Owners</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-2">加盟店様のリアルな声</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">空きスペース活用や副業・分散投資として選ばれています</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gradient-to-b from-slate-50 to-white p-6 rounded-2xl border border-slate-200/70 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-4">
+                <img src="images/voice-k.svg" alt="Kさん" class="w-14 h-14 rounded-full bg-sky-100 p-1" onerror="this.src='https://images.hirameki7.io/web-assets/143596/729911b9-6f33-4079-9280-ffc86869016b.svg?1764660626676'">
+                <div>
+                  <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Kさん</h4>
+                  <p class="text-[11px] text-slate-500">40代男性・不動産業経営者</p>
+                  <span class="inline-block px-2 py-0.5 bg-sky-100 text-sky-800 text-[10px] font-bold rounded mt-1">自社ビル空室活用</span>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                「所有している自社ビルの空室を活用したくリベルテに加盟。『無人』『脱毛・ホワイトニング』という時流に合い手間も少ないです。月4〜5時間の店舗業務で安定収入が得られ非常におすすめです。」
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-sky-700 font-bold">
+              ★ 空室を眠らせず高収益化に成功
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-b from-slate-50 to-white p-6 rounded-2xl border border-slate-200/70 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-4">
+                <img src="images/voice-y.svg" alt="Yさん" class="w-14 h-14 rounded-full bg-pink-100 p-1" onerror="this.src='https://images.hirameki7.io/web-assets/143596/86a49d24-7353-4b70-b22b-ef860d5cf5bd.svg?1764660633553'">
+                <div>
+                  <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Yさん</h4>
+                  <p class="text-[11px] text-slate-500">50代女性・会社役員</p>
+                  <span class="inline-block px-2 py-0.5 bg-rose-100 text-rose-800 text-[10px] font-bold rounded mt-1">コインランドリー比較</span>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                「本業とは別にコインランドリー投資を検討中、初期費用の安さと早期回収に魅力を感じて加盟。売上も想定通りで手応えがあり、運営の負担も少ないため2店舗目の出店も視野に入れています。」
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-rose-700 font-bold">
+              ★ 早期回収＆多店舗展開へ
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-b from-slate-50 to-white p-6 rounded-2xl border border-slate-200/70 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-4">
+                <img src="images/voice-t.svg" alt="Tさん" class="w-14 h-14 rounded-full bg-emerald-100 p-1" onerror="this.src='https://images.hirameki7.io/web-assets/143596/ce7e4fd6-ed4f-4245-b1ee-41a15fc3bf7a.svg?1764660638938'">
+                <div>
+                  <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Tさん</h4>
+                  <p class="text-[11px] text-slate-500">40代男性・サロンオーナー</p>
+                  <span class="inline-block px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded mt-1">既存サロンの一角導入</span>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                「サロンの空きスペースを活用してセルフ脱毛を導入。初期費用も抑えられ、家賃はそのままで収益を生み出せる点が魅力。清掃と補充だけで本業の合間に無理なく運営できています。」
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-emerald-700 font-bold">
+              ★ 家賃そのままプラスの収益源に
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. 全国展開加速中＆店舗網 ==================== -->
+    <section class="py-12 sm:py-16 bg-gradient-soft border-y border-sky-100/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-sky bg-sky-100 px-3 py-1 rounded-full">Expansion</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+              リベルテは全国展開を<br class="hidden sm:inline"><span class="text-gradient-sky">急速に加速中！</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              2025年1月の全国展開スタート以降、出店が一気に加速。<br>
+              リベルテの加盟店オーナー様は単なる契約者ではなく、一緒にお客様を喜ばせ、ブランドを育てていく大切な“仲間”です。
+            </p>
+            
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 py-2">
+              <div class="bg-white/80 p-3 rounded-xl border border-sky-100 text-center">
+                <span class="text-[10px] font-semibold text-slate-500">2026年3月まで</span>
+                <p class="text-base sm:text-lg font-black text-sky-700">14店舗決定</p>
+              </div>
+              <div class="bg-white/80 p-3 rounded-xl border border-sky-100 text-center">
+                <span class="text-[10px] font-semibold text-slate-500">2026年中目標</span>
+                <p class="text-base sm:text-lg font-black text-sky-600">30店舗</p>
+              </div>
+              <div class="bg-white/80 p-3 rounded-xl border border-sky-100 text-center">
+                <span class="text-[10px] font-semibold text-slate-500">2028年目標</span>
+                <p class="text-base sm:text-lg font-black text-slate-800">100店舗</p>
+              </div>
+            </div>
+
+            <div class="rounded-xl overflow-hidden shadow-md">
+              <img src="images/store.jpg" alt="リベルテ出店店舗" class="w-full h-44 sm:h-52 object-cover" onerror="this.src='https://images.hirameki7.io/web-assets/143596/99dacd0f-e20e-4c91-8bab-f66e6e48776a.jpg?1764824927784'">
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="glass-card rounded-2xl p-4 sm:p-6 border border-sky-100 shadow-md">
+              <h3 class="text-xs font-bold text-slate-500 text-center mb-2">全国出店予定エリアマップ</h3>
+              <img src="images/japan-map.png" alt="出店予定日本地図" class="w-full h-auto max-h-96 object-contain mx-auto" onerror="this.src='https://images.hirameki7.io/web-assets/143596/d4cdf67b-11b4-4c8d-a519-cf183ad41a78.png?1764816293056'">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. FC本部代表プロフィール ==================== -->
+    <section id="profile" class="py-12 sm:py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-sky bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Leadership</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">FC本部代表プロフィール</h2>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-sky-100 shadow-md">
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+            
+            <div class="sm:col-span-5 text-center">
+              <div class="inline-block relative rounded-2xl overflow-hidden shadow-lg border-2 border-white">
+                <img src="images/president.jpeg" alt="代表取締役 髙橋 嘉人" class="w-52 sm:w-full h-auto object-cover mx-auto" onerror="this.src='https://images.hirameki7.io/web-assets/143596/0c9c2d3b-4e33-48ce-97b4-8fabfe4d29b0.jpeg?1764824709583'">
+              </div>
+            </div>
+
+            <div class="sm:col-span-7 space-y-4">
+              <div>
+                <span class="text-xs text-slate-500">株式会社ViliV / 株式会社４４１０ 代表取締役</span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">髙橋 嘉人 <span class="text-xs sm:text-sm font-normal text-slate-500">（たかはし よしと）</span></h3>
+              </div>
+
+              <div class="text-xs text-slate-600 space-y-2 leading-relaxed bg-slate-50 p-4 rounded-xl">
+                <p><strong>株式会社４４１０（ヨンヨンイチゼロ）</strong><br>※Liberte直営店およびパーソナルジムを直営</p>
+                <p><strong>株式会社ViliV（ビリーヴ）</strong><br>※Liberteフランチャイズ本部を運営</p>
+              </div>
+
+              <div class="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3">
+                <p><span class="font-bold text-slate-700">本部所在地：</span>〒910-0814 福井県福井市高木中央2-2810 高山ビル2-A</p>
+                <p><span class="font-bold text-slate-700">EMAIL：</span>info@4410-corp.jp</p>
+                <p><span class="font-bold text-slate-700">LINE ID：</span>sln_lbrt</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10. オープンまでのカンタン7ステップ ==================== -->
+    <section id="steps" class="py-12 sm:py-16 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-sky bg-sky-100 px-3 py-1 rounded-full">Roadmap</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">オープンまでの流れ</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">本部が各ステップを丁寧にサポートするため、未経験でも安心です</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm relative">
+            <span class="text-xs font-extrabold text-sky-600 bg-sky-50 px-2 py-0.5 rounded">STEP 01</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-2">個別面談・お問い合わせ</h4>
+            <p class="text-[11px] text-slate-500 mt-1">オンラインでモデルや収益シミュレーションをご案内。</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm relative">
+            <span class="text-xs font-extrabold text-sky-600 bg-sky-50 px-2 py-0.5 rounded">STEP 02</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-2">店舗見学</h4>
+            <p class="text-[11px] text-slate-500 mt-1">実際の店舗や無人運営システムの稼働状況を確認。</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm relative">
+            <span class="text-xs font-extrabold text-sky-600 bg-sky-50 px-2 py-0.5 rounded">STEP 03</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-2">仮契約締結</h4>
+            <p class="text-[11px] text-slate-500 mt-1">出店エリアの確保と具体的な準備を開始。</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm relative">
+            <span class="text-xs font-extrabold text-sky-600 bg-sky-50 px-2 py-0.5 rounded">STEP 04</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-2">物件確認・空きスペース選定</h4>
+            <p class="text-[11px] text-slate-500 mt-1">既存スペースの活用可否や適した物件を調査。</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm relative">
+            <span class="text-xs font-extrabold text-sky-600 bg-sky-50 px-2 py-0.5 rounded">STEP 05</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-2">本契約締結</h4>
+            <p class="text-[11px] text-slate-500 mt-1">契約内容を確認し、正式加盟となります。</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm relative">
+            <span class="text-xs font-extrabold text-sky-600 bg-sky-50 px-2 py-0.5 rounded">STEP 06</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-2">開店準備</h4>
+            <p class="text-[11px] text-slate-500 mt-1">機材導入、看板設置、WEB予約システム初期設定。</p>
+          </div>
+
+          <div class="bg-gradient-to-r from-sky-500 to-sky-600 text-white p-4 rounded-xl shadow-md sm:col-span-2 lg:col-span-2 flex items-center justify-between">
+            <div>
+              <span class="text-xs font-extrabold bg-white/20 text-white px-2 py-0.5 rounded">STEP 07</span>
+              <h4 class="font-black text-base mt-1">祝！OPEN・運営スタート！</h4>
+              <p class="text-xs text-sky-100 mt-0.5">現場作業は週1時間のみ。集客は本部がフルサポート。</p>
+            </div>
+            <i class="fa-solid fa-store text-3xl text-white/80 pr-2"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 11. よくある質問 (FAQ アコーディオン) ==================== -->
+    <section id="faq" class="py-12 sm:py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-sky bg-sky-50 px-3 py-1 rounded-full border border-sky-100">FAQ</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">よくあるご質問</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">検討時によくいただく質問をまとめました</p>
+        </div>
+
+        <div class="space-y-3">
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button class="accordion-btn w-full p-4 text-left font-bold text-slate-800 flex items-center justify-between bg-slate-50/70 hover:bg-sky-50/50 transition-colors" aria-expanded="false">
+              <span class="flex items-center gap-2 text-sm sm:text-base">
+                <span class="text-sky-600 font-extrabold">Q.</span> 美容業の経験がまったくありませんが大丈夫ですか？
+              </span>
+              <i class="fa-solid fa-chevron-down text-slate-400 accordion-icon text-xs"></i>
+            </button>
+            <div class="accordion-content bg-white px-4">
+              <div class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                まったく問題ございません。完全無人のセルフ型サロンのため、施術技術や専門資格は不要です。日常の業務は現場の清掃や消耗品の補充のみですので、異業種のオーナー様や会社員の方でも無理なく運営されています。
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button class="accordion-btn w-full p-4 text-left font-bold text-slate-800 flex items-center justify-between bg-slate-50/70 hover:bg-sky-50/50 transition-colors" aria-expanded="false">
+              <span class="flex items-center gap-2 text-sm sm:text-base">
+                <span class="text-sky-600 font-extrabold">Q.</span> 本当に週1時間（月4時間程度）の作業で運営できますか？
+              </span>
+              <i class="fa-solid fa-chevron-down text-slate-400 accordion-icon text-xs"></i>
+            </button>
+            <div class="accordion-content bg-white px-4">
+              <div class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                はい、可能です。予約管理・顧客管理・オンライン決済・問い合わせ窓口・Web集客などはすべて本部が一元管理しております。オーナー様が対応するのは、現場でしかできない週1回程度の定期清掃と消耗品補充のみです。
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button class="accordion-btn w-full p-4 text-left font-bold text-slate-800 flex items-center justify-between bg-slate-50/70 hover:bg-sky-50/50 transition-colors" aria-expanded="false">
+              <span class="flex items-center gap-2 text-sm sm:text-base">
+                <span class="text-sky-600 font-extrabold">Q.</span> 自社のビルや既存サロンの一角（空きスペース）でも導入できますか？
+              </span>
+              <i class="fa-solid fa-chevron-down text-slate-400 accordion-icon text-xs"></i>
+            </button>
+            <div class="accordion-content bg-white px-4">
+              <div class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                大歓迎です。実際に既存の不動産オーナー様やサロン経営者様が、空室や余剰スペースを活用して低初期費用（180万円〜）で開業されています。スペースに合わせた最適なブース設計を本部がご提案いたします。
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button class="accordion-btn w-full p-4 text-left font-bold text-slate-800 flex items-center justify-between bg-slate-50/70 hover:bg-sky-50/50 transition-colors" aria-expanded="false">
+              <span class="flex items-center gap-2 text-sm sm:text-base">
+                <span class="text-sky-600 font-extrabold">Q.</span> お客様からの問い合わせや機械トラブルの対応はどうなりますか？
+              </span>
+              <i class="fa-solid fa-chevron-down text-slate-400 accordion-icon text-xs"></i>
+            </button>
+            <div class="accordion-content bg-white px-4">
+              <div class="py-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                お客様向けの一次対応や問い合わせ窓口は本部がサポートいたします。万が一の機材トラブル時も、マニュアルおよび本部の保守サポート体制が整っておりますので、安心して運営いただけます。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 12. お問い合わせ・無料相談フォーム (メインCV) ==================== -->
+    <section id="contact-form-section" class="py-14 sm:py-20 bg-gradient-soft border-t border-sky-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        
+        <div class="text-center mb-8">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-sky bg-sky-100 px-3 py-1 rounded-full">Contact & Consultation</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">無料相談・資料請求</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2">
+            個別オンライン説明・収支シミュレーション資料をご希望の方はお気軽にお申し込みください。<br class="hidden sm:inline">
+            強引な勧誘等は一切ございません。
+          </p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-4 sm:p-8 border border-sky-100 shadow-xl">
+          
+          <!-- 指定埋め込みフォーム（form_id=36655） -->
+          <div class="w-full">
+            <div id="xhm-form" class="min-h-[400px]"></div>
+            <script type="application/javascript" src="https://form.hirameki7.io/form.js?site_id=143596&form_id=36655" charset="UTF-8" defer></script>
+          </div>
+
+          <!-- フォールバック / 別タブ直通ボタン -->
+          <div id="form-fallback-msg" class="hidden mt-4 pt-4 border-t border-slate-100 text-center">
+            <p class="text-xs text-slate-500 mb-2">※フォームが正しく表示されない場合は、下記リンクより直接ご入力いただけます。</p>
+            <a href="https://liberte.hirameki7.site/ContactForm/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2 text-xs font-bold text-sky-700 bg-sky-50 border border-sky-200 rounded-lg hover:bg-sky-100">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> お問い合わせ専用フォームを直接開く
+            </a>
+          </div>
+
+          <!-- LINE相談への別ルート誘導 -->
+          <div class="mt-8 pt-6 border-t border-slate-200/80 text-center">
+            <p class="text-xs font-bold text-slate-700 mb-3">「フォーム入力よりLINEですぐ聞きたい」という方はこちら</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="https://line.me/ti/p/~sln_lbrt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-xl transition-all w-full sm:w-auto">
+                <i class="fa-brands fa-line text-2xl text-emerald-500"></i>
+                <span>LINEで友だち追加して質問する</span>
+              </a>
+              <div class="hidden sm:flex items-center gap-2 text-left bg-white p-2 rounded-xl border border-slate-200">
+                <img src="images/line-qr.jpeg" alt="LINE QRコード" class="w-14 h-14 object-contain rounded" onerror="this.src='https://images.hirameki7.io/web-assets/143596/d4e54b74-699c-4f73-a7d1-d7a7d486f6e9.jpeg?1764655861246'">
+                <div class="text-[10px] text-slate-500">
+                  <span class="font-bold text-slate-700 block">QRコード読み取り</span>
+                  LINE ID: sln_lbrt
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 13. すりガラスフッター ==================== -->
+  <footer class="glass-footer py-8 text-center text-xs text-slate-500">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-4">
+      <div class="flex justify-center">
+        <img src="images/logo.svg" alt="Liberté" class="h-8 w-auto opacity-80" onerror="this.src='https://liberte.hirameki7.site/images/logo.svg'">
+      </div>
+      <p class="text-[11px] text-slate-400">
+        年中無休・24Ｈ営業の無人セルフ脱毛＆セルフホワイトニング Liberté（リベルテ）
+      </p>
+      <p class="text-[11px] text-slate-400">
+        運営元：株式会社ViliV / 株式会社４４１０（福井県福井市高木中央2-2810 高山ビル2-A）
+      </p>
+      <p class="copyright pt-2 text-[10px] text-slate-400 border-t border-slate-100">
+        © ViliV Co.,Ltd. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==================== 14. スマホ画面固定追従CTAバー ==================== -->
+  <div id="floating-cta" class="fixed bottom-0 left-0 right-0 z-40 sm:hidden glass-floating p-3 transition-opacity duration-300 pointer-events-none opacity-0">
+    <div class="flex items-center gap-2">
+      <a href="https://line.me/ti/p/~sln_lbrt" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-1.5 py-3 px-2 rounded-xl text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200">
+        <i class="fa-brands fa-line text-lg text-emerald-500"></i> LINE相談
+      </a>
+      <a href="#contact-form-section" class="shimmer-btn flex-[2] flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl text-xs font-extrabold text-white bg-gradient-to-r from-sky-500 to-sky-600 shadow-md shadow-sky-500/30">
+        <i class="fa-regular fa-envelope text-sm"></i> 無料相談・資料請求
+      </a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
