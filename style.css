@@ -1,0 +1,159 @@
+﻿/* ==========================================================================
+   Liberté（リベルテ）FC募集LP - カスタムスタイルシート
+   ========================================================================== */
+
+@charset "UTF-8";
+
+/* --- 基本フォント＆サイズ拡大（読みやすさ重視） --- */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  word-break: break-word;
+  line-break: strict;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+}
+
+/* --- カラー変数 --- */
+:root {
+  --color-white: #ffffff;
+  --color-sky-blue: #0284c7;
+  --color-sky-blue-light: #0ea5e9;
+  --color-ice-blue: #f0f9ff;
+  --color-ice-blue-border: #bae6fd;
+  --color-sakura-pink: #fdf2f8;
+  --color-sakura-pink-border: #fce7f3;
+  --color-sakura-accent: #f43f5e;
+  --color-pale-mint: #f0fdf4;
+  --color-pale-mint-border: #dcfce7;
+  --color-mint-accent: #10b981;
+}
+
+/* --- すりガラス効果（Glassmorphism） --- */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(224, 242, 254, 0.85);
+}
+
+.glass-footer {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(224, 242, 254, 0.9);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px -5px rgba(2, 132, 199, 0.08);
+}
+
+.glass-floating {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(2, 132, 199, 0.18);
+  box-shadow: 0 -8px 25px rgba(2, 132, 199, 0.12);
+}
+
+/* --- ファーストビュー：女性背景と文字の重なり防止 --- */
+.hero-wrapper {
+  position: relative;
+  background-color: #f8fafc;
+}
+
+/* PC：右側に女性が大きく見える背景設定 */
+@media (min-width: 1024px) {
+  .hero-pc-bg {
+    background-image: url('images/fv-bg.jpg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .hero-gradient-overlay {
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.88) 55%, rgba(255, 255, 255, 0.1) 75%, transparent 100%);
+  }
+}
+
+/* キラリと光るボタンアニメーション */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: rotate(25deg) translate(-100%, -100%);
+  transition: transform 0.8s ease;
+}
+
+.shimmer-btn:hover::after {
+  transform: rotate(25deg) translate(100%, 100%);
+}
+
+.shimmer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -4px rgba(2, 132, 199, 0.4);
+}
+
+/* --- アコーディオンの開閉トランジション --- */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.accordion-content.active {
+  max-height: 800px;
+  opacity: 1;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* --- 埋め込みフォーム調整 --- */
+#xhm-form {
+  min-height: 400px;
+  width: 100%;
+}
+
+#xhm-form iframe {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 12px;
+}
