@@ -819,7 +819,7 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   .comparison-table tr > :is(th, td) + :is(th, td) { border-left: 1px solid #9dc6dc; }
   .comparison-table tbody tr > :is(th, td) { border-top: 1px solid #dceaf2; }
 }
-#comparison h2 .phrase:nth-child(2) { margin: 0 .45em; font-size: .65em; font-family: Georgia, serif; font-style: italic; }
+#comparison h2 .phrase:nth-child(2) { margin: 0 .45em; font-size: .65em; font-family: 'Noto Sans JP', Arial, sans-serif; font-style: normal; font-weight: 700; letter-spacing: .06em; }
 .content-section .investment-card { padding: 40px; }
 .investment-card > .text-5xl { font-size: 76px; font-weight: 700; line-height: 1.3; }
 .content-section .investment-details { padding: 28px; }
@@ -909,7 +909,8 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   .steps-grid > div:last-child .fa-store { display: none; }
   .problem-heading { display: flex; align-items: center; gap: 16px; }
   .problem-heading > div { margin: 0; }
-  #challenges .problem-heading h3 { font-size: 21px; text-wrap: pretty; }
+  #challenges .problem-heading h3 { font-size: clamp(18px, 5.05vw, 21px); white-space: nowrap; text-wrap: nowrap; }
+  #challenges .problem-heading h3 > span { display: inline; }
   #challenges > div > div:last-child { padding: 24px 16px; }
   #challenges .solution-banner > p { font-size: 20px; }
   #challenges .solution-banner > div > p:first-child { font-size: 24px; }
@@ -918,24 +919,29 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   #reasons .three-card-grid > div > div > .p-5 { padding: 24px; }
   #voices .three-card-grid > div { padding: 24px; }
   #comparison h2 .phrase { display: block; }
-  .comparison-table-wrap { border: 0 !important; border-radius: 0; box-shadow: none !important; background: transparent; }
+  .content-section .comparison-table-wrap { border: 0 !important; border-radius: 0; box-shadow: none !important; background: transparent; }
   .comparison-table, .comparison-table tbody { display: block; width: 100%; }
   .comparison-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  .comparison-table tbody tr { display: grid; grid-template-columns: 1fr; border: 1px solid #c5dce9; border-radius: 18px; margin-bottom: 16px; overflow: hidden; background: #fff; }
+  #comparison .comparison-table tbody tr { display: grid; grid-template-columns: 1fr; border: 1px solid #d5e5ee; border-radius: 4px; margin-bottom: 16px; overflow: hidden; background: #fff; }
   .comparison-table :is(th, td) { display: block; width: auto; padding: 16px 20px; border-left: 0; text-align: left; font-size: 18px; }
-  .comparison-table tbody th { background: #285676; color: #fff; padding: 12px 20px; }
-  .comparison-table td::before { content: attr(data-label); display: block; margin-bottom: 4px; color: #54748a; font-size: 14px; font-weight: 700; }
-  .comparison-table td:last-child { background: #e6f3fa; }
+  .comparison-table tbody th { background: #e0edf4; color: #193e5e; padding: 12px 20px; }
+  .comparison-table td::before { content: attr(data-label); display: block; margin-bottom: 4px; color: #54748a; font-size: 14px; font-weight: 500; }
+  .comparison-table td:last-child { background: #f3f9fc; border-top: 1px solid #d7e7f0; }
   .comparison-table td:last-child::before { color: #28658b; }
+  #comparison h2 .phrase:nth-child(2) { margin: 8px 0; line-height: 1.4; }
+  .content-section .mobile-copy-line { display: block; }
+  .investment-outcome strong { display: inline-block; }
+  #voices .voice-lead-line { display: block; font-size: clamp(16px, 4.8vw, 18px); white-space: nowrap; }
   .content-section .investment-card { padding: 28px 18px; }
   .investment-card > span { padding: 8px 12px; font-size: 17px; }
   .investment-card > .text-5xl { font-size: 64px; }
   .content-section .investment-details { padding: 20px 16px; }
   .investment-card .btn-cta-primary { font-size: 18px; }
-  .expansion-stats { gap: 7px; }
-  .content-section .expansion-stats p { font-size: 21px; }
-  .content-section .expansion-stats span { font-size: 12px; }
-  .content-section .expansion-stats .stat-qualifier { display: block; font-size: 14px; }
+  .expansion-stats { grid-template-columns: 1fr; gap: 12px; }
+  .content-section .expansion-stats > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 76px; padding: 14px 16px; text-align: left; }
+  .content-section .expansion-stats p { display: grid; grid-template-columns: minmax(0, 1fr) 28px; align-items: baseline; column-gap: 6px; width: 136px; margin: 0; font-size: 26px; text-align: right; white-space: nowrap; }
+  .content-section .expansion-stats span { font-size: 14px; }
+  .content-section .expansion-stats .stat-qualifier { display: inline; font-size: 14px; }
   #profile .glass-card { padding: 24px 18px; }
   #profile .glass-card > .grid { grid-template-columns: 1fr; }
   #profile .glass-card > .grid > div { grid-column: auto; }
@@ -957,13 +963,12 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   .hero-title { font-size: 9.1vw; }
   .hero-subtitle { margin: 16px 0 20px; }
   .hero-details { margin-top: 20px; }
-  /* 横3列を維持し、長いラベルは意味の区切りで改行して内側の余白を確保。 */
+  /* 参考画像に合わせた横3列。ラベル・数値は各1行にし、運営スタイルのみ小さめに。 */
   .hero-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-  .hero-fact { box-sizing: border-box; min-width: 0; min-height: 118px; flex-direction: column; justify-content: center; gap: 8px; padding: 14px 10px; border-radius: 12px; white-space: normal; }
-  .hero-fact dt { display: flex; flex-direction: column; justify-content: center; min-height: 3em; margin: 0; font-size: clamp(11px, 3vw, 13px); line-height: 1.5; }
-  .hero-fact-label-part { display: block; }
-  .hero-fact dd, .hero-fact--style dd { display: flex; flex-direction: column; justify-content: center; min-height: 2.8em; margin: 0; font-size: clamp(15px, 4.65vw, 21px); line-height: 1.4; white-space: nowrap; }
-  .hero-fact--style dd { font-size: clamp(15px, 4.2vw, 19px); }
+  .hero-fact { box-sizing: border-box; min-width: 0; min-height: 74px; flex-direction: column; justify-content: center; gap: 6px; padding: 10px 8px; border-radius: 12px; white-space: nowrap; }
+  .hero-fact dt { margin: 0; font-size: clamp(9.5px, 2.85vw, 16px); line-height: 1.6; }
+  .hero-fact dd, .hero-fact--style dd { display: flex; align-items: center; justify-content: center; height: 1.4em; min-height: 0; margin: 0; font-size: clamp(17px, 5.5vw, 32px); line-height: 1.4; }
+  .hero-fact--style dd { font-size: clamp(14px, 4.3vw, 25px); height: 1.791em; }
   .hero-support { margin: 20px 0 14px; font-size: 3.6vw; gap: .7em; }
   .hero-actions { gap: 12px; }
   .hero-actions .hero-button, .hero-actions .hero-button--line { min-height: 64px; padding: 17px 20px; font-size: 19px; gap: .6em; }
@@ -973,9 +978,9 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 @media (max-width: 374px) {
   .content-section h2 { font-size: 28px; }
   .content-section > div { padding-left: 16px; padding-right: 16px; }
-  .content-section .expansion-stats p { font-size: 18px; }
-  .content-section .expansion-stats span { font-size: 11px; }
   #profile .profile-copy h3 > span { display: block; }
   .problem-heading { display: block; }
   .problem-heading > div { margin-bottom: 12px; }
+  .hero-fact dd { font-size: 5.2vw; }
+  .hero-fact--style dd { font-size: 4.2vw; height: 1.734em; }
 }
