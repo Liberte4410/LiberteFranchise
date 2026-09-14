@@ -815,6 +815,9 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 .comparison-table tbody td:last-child { font-weight: 700; }
 .content-section .comparison-table-wrap { overflow: hidden; isolation: isolate; }
 @media (min-width: 768px) {
+  #challenges .problem-heading h3 { white-space: nowrap; }
+  #challenges .problem-heading h3 > span { display: inline; }
+  .content-section .desktop-copy-line { display: block; }
   .comparison-table { border-collapse: separate; border-spacing: 0; table-layout: fixed; }
   .comparison-table tr > :is(th, td) + :is(th, td) { border-left: 1px solid #9dc6dc; }
   .comparison-table tbody tr > :is(th, td) { border-top: 1px solid #dceaf2; }
@@ -888,6 +891,7 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 }
 @media (min-width: 1440px) {
   .challenge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #challenges .problem-heading h3 { font-size: 20px; }
   .problem-chunk { display: block; }
 }
 @media (max-width: 1100px) {
