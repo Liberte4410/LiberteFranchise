@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" fill="none">
+ <defs>
+  <clipPath id="annex-panel-clip"><rect x="44.5" y="38.5" width="391" height="178"/></clipPath>
+ </defs>
+ <ellipse cx="240" cy="225" rx="205" ry="12" fill="#dbe9df"/>
+ <g clip-path="url(#annex-panel-clip)">
+  <rect x="43" y="37" width="394" height="181" fill="#fff9ed"/>
+  <rect x="270" y="65" width="167" height="153" fill="#dcefe5"/>
+  <rect x="43" y="37" width="394" height="28" fill="#bcded3"/>
+
+  <g stroke="#285575" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+   <rect x="69" y="85" width="53" height="63" rx="22" fill="#dcecf7"/>
+   <rect x="165" y="85" width="53" height="63" rx="22" fill="#dcecf7"/>
+   <path d="M62 155h67"/><path d="M158 155h67"/>
+   <path d="M76 180h39"/><path d="M172 180h39"/>
+   <path d="M95 178v35"/><path d="M191 178v35"/>
+   <path d="M81 213h28"/><path d="M177 213h28"/>
+   <path d="M75 164v18h41v-18" fill="#e7af97"/>
+   <path d="M171 164v18h41v-18" fill="#e7af97"/>
+  </g>
+
+  <path d="M300 101c4-10 17-14 25-7 11 9 9 25 5 41-5 19-7 38-1 58l28 10c8 3 8 11 0 11h-42c-6 0-10-4-10-10l-3-48c-2-23-9-41-2-55z" fill="#f3d2bf" stroke="#285575" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M330 139c-8 4-13 12-14 21" stroke="#d3a459" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M326 134l-7-5M323 142l-9-1M326 150l-8 5" stroke="#d3a459" stroke-width="2.5" stroke-linecap="round"/>
+
+  <g transform="rotate(16 347 156)" stroke="#285575" stroke-width="3" stroke-linejoin="round">
+   <rect x="329" y="128" width="37" height="20" rx="5" fill="#eef7fb"/>
+   <rect x="336" y="133" width="23" height="9" rx="2" fill="#86cbd0" stroke-width="2"/>
+   <path d="M340 147h17l-3 38c-.5 7-5 11-11 11h-7z" fill="#fffdf6"/>
+  </g>
+
+  <path d="M360 151c18-4 19-27 31-31" stroke="#7e6a9f" stroke-width="3" stroke-linecap="round"/>
+  <g stroke="#285575" stroke-width="3" stroke-linejoin="round">
+   <rect x="388" y="100" width="34" height="91" rx="7" fill="#c7bade"/>
+   <rect x="394" y="109" width="22" height="16" rx="3" fill="#eef7fb"/>
+   <circle cx="405" cy="136" r="3" fill="#d3a459"/>
+   <path d="M393 191v12M417 191v12M387 204h12M411 204h12"/>
+  </g>
+  <path d="M288 214h135" stroke="#76aa99" stroke-width="3" stroke-linecap="round"/>
+  <text x="353" y="83" text-anchor="middle" fill="#285575" font-family="Arial,'Noto Sans JP',sans-serif" font-size="13" font-weight="700" letter-spacing="1">セルフ脱毛</text>
+ </g>
+
+ <g stroke="#285575" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M270 65.5v151" stroke="#76aa99" stroke-dasharray="6 7" stroke-linecap="butt"/>
+  <rect x="43" y="37" width="394" height="181"/>
+  <path d="M43 65h394"/>
+ </g>
+ <text x="153" y="57" text-anchor="middle" fill="#285575" font-family="Arial,sans-serif" font-size="17" letter-spacing="3">SALON</text>
+ <text x="353" y="57" text-anchor="middle" fill="#285575" font-family="Georgia,serif" font-size="19" letter-spacing="2">Liberté</text>
+ <path d="M239 109v22M228 120h22" stroke="#d3a459" stroke-width="3" stroke-linecap="round"/>
+</svg>
